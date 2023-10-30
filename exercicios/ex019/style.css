@@ -1,0 +1,41 @@
+@charset "UTF-8";
+/*
+ Em HTML é id = Em CSS é # (só pode um elemento)
+ Em HTML é class = Em CSS é . (pode vários elementos)   
+    Posso colocar #principal sem h1 mas gosto de h1#principal   
+*/
+body {
+    background-color: #A7FAB6;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: #273B2B;
+}
+
+h2 {
+    color:#527A59 ;
+}
+
+h1#principal {
+    text-align: center;
+    color: white;
+}
+
+.basico {
+    color:#527A59 ;
+}
+
+.intermediario {
+    color:#7a7652 ;
+}
+
+.avancado {
+    color:#7a5252 ;
+}  
+
+.destaque {
+    background-color: #c5c56070;   
+}
+
+

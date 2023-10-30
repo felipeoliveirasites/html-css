@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tags HTML</title>
+    <style>
+        abbr{font-weight: bold;}
+        [aria-label] {
+        position: relative;
+        }
+
+        abbr{
+            text-decoration: none;
+            
+        }
+        
+        [aria-label]::after {
+        content: attr(aria-label);
+        display: none;
+        position: absolute;
+        top: 110%;
+        left: 0px;
+        z-index: 5000;
+        pointer-events: none;
+        padding: 8px 10px;
+        text-decoration: none;
+        font-size: .9em;
+        color: #000000;
+        background-color: #f7e8a5;
+        }
+        
+        [aria-label]:hover::after {
+        display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tags em HTML</h1>
+        <p>Em HTML5, podemos inserir os elementos da lista a seguir. Passe o mouse sobre os termos para descobrir qual tag deverá utilizar em cada caso.</p>
+        <ul type="square" style="color: darkgreen">
+            <li><abbr aria-label="Use a tag <p>">Páragrafo</abbr></li>
+            <li><abbr aria-label="Use a tag <h1>">Títulos</abbr></li>
+            <li><abbr aria-label="Use a tag <img>">Imagens</abbr></li>
+            <li><abbr aria-label="Use a tag <abbr>">Abreviações</abbr></li>
+            <li><abbr aria-label="Use a tag <code>">Códigos-fonte</abbr></li>
+            <li><abbr aria-label="Use a tag <ol> <li>">Listas numeradas</abbr></li>
+            <li><abbr aria-label="Use a tag <ul> e <li>">Listas com demarcadores</abbr></li> 
+        </ul>
+
+        <ul type="square" style=" color: blue;">
+            <li title="Use a tag <p>">Páragrafo</li>
+            <li title="Use a tag <h1>">Títulos</li>
+            <li title="Use a tag <img>">Imagens</li>
+            <li title="Use a tag <abbr>">Abreviações</li>
+            <li title="Use a tag <code>">Códigos-fonte</li>
+            <li title="Use a tag <ol> <li>">Listas numeradas</li>
+            <li title="Use a tag <ul> e <li>">Listas com demarcadores</li> 
+            </ul>
+
+        <ul type="square" style="color:coral;">
+            <li> <abbr title="Use a tag <p>">Paragráfo</abbr></li>
+            <li> <abbr title="Use a tag <h1> à <h6>">Títulos</abbr> </li>
+            <li> <abbr title="Use a tag <img>">Imagens</abbr></li>
+            <li> <abbr title="Use a tag</abbr>">Abreviações</abbr></li>
+            <li> <abbr title="Use a tag <code>">Códigos-fonte</abbr></li>
+            <li> <abbr title="Use a tag <ol> e <li>">Listas numeradas</abbr></li>
+            <li> <abbr title="Use a tag <ul> e <li>">Listas com demarcadores</abbr></li> 
+        </ul>
+</body>
+</html>

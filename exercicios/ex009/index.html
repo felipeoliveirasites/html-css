@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas</title>
+</head>
+<body>
+  <h1>Trabalhando com Lstas</h1>  
+    <h2>Listas ordenadas</h2>
+        1- acordar <br>
+        2- ligar para joão <br>
+        2- tomar café <br>
+        3- escovar os dentes <br>
+        4- lavar roupa <br>     
+        <ol type="1" start="1"> <!-- 1,A,a,i,I --> 
+            <li>acordar</li>
+            <li>ligar para joão</li>
+            <li>tomar café</li>
+            <li>escovar os dentes</li>
+            <li>lavar roupa <!-- opcional fechamento -->
+        </ol>
+        <ol type="1" start="6">
+            <li>Ir para a faculdade</li>
+            <li>Almoçar</li>
+            <li>Ir para o trabalho</li>
+            <li>Voltar para casa</li>
+            <li>Jantar</li>
+            <li>Dormir</li>
+        </ol>
+
+    <h2>Listas não ordenadas</h2>
+        <ul type="disc"> <!-- disc,circle,square -->
+            <li>Pão</li>
+            <li>Leite</li>
+            <li>Tomate </li>
+            <li>Alface</li>
+            <li>Manteiga</li>
+            <li>Arroz</li>
+            <li>Feijão</li>
+        </ul> <!-- muito útil no dia-a-dia(em menus também)-->
+    <h2>Minhas línguagens favoritas</h2>
+        <ol>
+            <li>Antigas</li>
+                <ol type="a">
+                    <li>Clipper</li>
+                    <li>Visual Basic</li>
+                    <li>Fortran</li>
+                    <li>Delphi</li>
+                </ol>
+            <li>Novas</li> 
+                <ol type="a" start="5">
+                    <li>PHP</li>
+                    <li>Pyton</li>
+                    <li>JavaScript</li>
+                    <li>Kotlin</li>
+                </ol>
+        </ol>
+    <h2>Meus jogos favoritos</h2>
+        <ol>
+            <li>NES</li>
+                <ul type ="square">
+                    <li>Mario Bros</li>
+                        <ul type="circle">
+                            <li>Mario Bros3</li>
+                            <li>Mario Lost Levels</li>
+                        </ul>
+                    <li>Ninja Gaiden</li>
+                </ul>
+            <li>SNES</li>
+                <ul type ="square">
+                    <li>Mario</li>
+                    <li>Donkey Kong</li>
+                </ul>
+            <li>Playstation</li>    
+                <ul type ="square">
+                    <li>Final Fantasy</li>
+                    <li>Castlevania</li>
+                </ul> <!-- Muito usado em menus -->
+        </ol>
+    <h2> Lista de definições</h2>
+        <dl>
+            <dt>HTML</dt>
+            <dd>Linguagem de marcação para criação de conteúdo de um site.</dd>
+            <dt>CSS</dt>
+            <dd>Linguagem de marcação para criação do design de um site.</dd>
+            <dt>JavaScript</dt>
+            <dd>Linguegem de programação para criação de interatividade.</dd>
+            <!-- pode ser personalizado com CSS, geralmente é personalizado-->
+            <!-- facilita com mecanismo de busca ex: qual é a definição de html dá valor pra quem usa-->
+        </dl>
+
+</body>
+</html>
