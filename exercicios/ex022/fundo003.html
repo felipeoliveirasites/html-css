@@ -6,20 +6,43 @@
     <title>Posição dos Fundos</title>
     <style>
         div.bloco{
-            height: 100px;
+            height: 200px;
             border: 1px solid black;
+            margin: 10px;
+            border-radius: 20px;
+            background-image: url("imagens/wallpaper003.jpg");
         }
+
+        div#q1{
+            background-position: left top;
+        }
+
+        div#q2{
+            background-position: left center;
+        }
+
+        div#q3{
+            background-position: right bottom;
+        }
+
+        div#q4{
+            background-position: center center;
+        }
+
     </style>
 </head>
 <body>
     <h1>Posição dos fundos</h1>
-    <div class="bloco">
+    <div class="bloco" id="q1">
 
-    </div class="bloco">
-    <div>
+    </div>
+    <div class="bloco" id="q2">
 
-    </div class="bloco">
-    <div>
+    </div>
+    <div class="bloco" id="q3">
+
+    </div>
+    <div class="bloco" id="q4">
 
     </div>
 </body>
