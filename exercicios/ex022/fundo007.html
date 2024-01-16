@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento vertical</title>
+    <style>
+        #container{
+            background-image: url("imagens/target001.png");
+            background-size: 100% 100%;
+            position: relative;
+            height: calc(100vh - 36px);
+            background-color: purple;
+            padding: 10px;
+        }
+
+        #conteudo{
+            background-image: url("imagens/target001.png");
+            background-size: 100% 100%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            height: 200px;
+            width: 400px;
+            background-color: yellow;
+            transform: translate(-50%, -50%);
+        }
+       /* Existe um jeito muito mais fácil de alinhar items, com apenas três linhas, e eu não tô falando isso em tom de crítica, pelo contrário, é sempre bom saber mais de um modo de resolver um problema. Então lá vai:
+
+#container {
+    display: flex; *//*Possui diversas funções (procurem pela documentação), uma delas é habilitar o manejamento do conteúdo*/
+    /*justify-content: center; /*Alinhamento horizontal, ou seja, dispensa o "margin: auto"*/
+    /*align-items: center; /*Alinhamento vertical*//*
+}
+
+Essas propriedades sempre são colocadas no elemento-pai (container), não se esqueçam desse importante detalhe. */
+    </style>
+</head>
+<body>
+    <section id="container">
+        <article id="conteudo">
+
+        </article>
+    </section>
+</body>
+</html>
