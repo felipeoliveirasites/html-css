@@ -12,12 +12,23 @@
         table {
             width: 400px;
             border-collapse: collapse;
+            height: 400px;
         }
+
+       
 
         td {
             border: 1px solid black;
-            padding: 8px; 
+            padding: 8px;
+            text-align: center; /*Alinhamento horizontal */
+            vertical-align: middle; /*Alinhamento vertical */
         }
+
+        .numero {
+            text-align: right;
+        }
+
+        
     </style>
 </head>
 <body>
@@ -35,21 +46,22 @@
             <td>B1</td>
             <td>C1</td>
         </tr>
-        <tr>
+        <tr> <!-- Segunda linha -->
             <td>A2</td>
             <td>B2</td>
-            <td>C2</td>
+            <td class="numero">C2</td>
         </tr>
-        <tr>
+        <tr> <!-- Terceira linha -->
             <td>A3</td>
             <td>B3</td>
-            <td>C3</td>
+            <td class="numero">C3</td>
         </tr>
-        <tr>
+        <tr> <!-- Quarta linha -->
             <td>A4</td>
-            <td>B4</td>
+            <td class="dado">B4</td>
             <td>C4</td>
         </tr>
+       
     </table>
 </body>
 </html>
