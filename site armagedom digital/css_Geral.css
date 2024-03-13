@@ -1,0 +1,76 @@
+.custom-logo {
+    animation-name:logo;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    transition: rotate 4s;
+    transition-timing-function:afar;
+
+}
+
+@keyframes logo {
+  from {transform: matrix(2,3,4,2,3,1);}
+  to {}
+}
+
+.custom-logo:hover {
+        rotate: 2.5deg;
+                opacity:50%;
+    }
+
+#ast-mobile-header button[type="button"] {
+  width: 122px;
+    border: 2px solid #eeeeee;
+    padding-top: 5px;
+    padding-bottom: 1px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-bottom-left-radius: 85px;
+    background-image: linear-gradient(to right, #BD202C, #E3B505);
+}
+#ast-mobile-header button[type="button"]:focus {
+   background-image: linear-gradient(to right, #ff8282, #7f3f3f);
+    border-bottom-left-radius: 70px;
+        padding-bottom: 2px;
+        outline: none;
+}
+    
+#ast-mobile-header .ast-mobile-header-content{
+margin-top: 25px;
+z-index:3;
+}
+
+#ast-hf-mobile-menu .menu-link {
+background-image:linear-gradient(to right, #BD202CEE, #7f3f3f);
+color: white;
+text-shadow: 1px 1px 1px black;
+text-decoration:underline;
+    border-radius: 10px;
+border: solid 2px white;
+border-collapse: collapse;
+margin-top: 1px;
+z-index:4;
+}
+
+#ast-hf-mobile-menu .menu-link:hover {
+    background-image:linear-gradient(to right, #ff8282, #ffffff);
+}
+
+
+#ast-mobile-header .site-primary-header-wrap {
+    height: 60px;
+}
+
+.gutentor-module .slick-dots li{ 
+background-color: #5F0B87!important;
+}
+
+.slick-active {
+background-color: whitesmoke!important;
+}
+
+.gutentor-module .slick-dots li.slick-active {
+background-color: whitesmoke!important;
+}
+
+
+
