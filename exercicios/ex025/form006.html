@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="post">
+        <p>
+            <label for="icor">Cor: </label>
+           <input type="color" name="cor" id="icor" value="#00ff00"> 
+        </p>
+        <p>
+            <label for="iniv">Nível de Satisfação: </label>
+            <input type="range" name="niv" id="iniv" value="2" min="1" max="5"> 
+        </p>
+        <p>
+            <label for="ifot">Foto do perfil:</label>
+            <input type="file" name="fot" id="ifot">
+            <!-- Quando for file tem que ser method: post e envia em forma de dados
+            sempre que usar elementos que passar de 3000 bytes usar o method: post-->
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>

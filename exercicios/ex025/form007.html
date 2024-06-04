@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="post">
+        <p>
+            <label for="iest">Estado</label> <!-- label elemento -->
+            <select name="est" id="iest"> 
+                <!-- a forma mais simple é com option-->
+                <option value="" selected>--- Escolha ---</option> <!-- Pessoal costuma colocar este aqui-->
+                <optgroup label="Região Sudeste"> <!-- label atributo -->
+                    <option value="MG">Minas Gerais</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP">São Paulo</option>
+                </optgroup>
+
+                <optgroup label="Região Nordeste">
+                    <option value="MA">Maranhão</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                </optgroup>
+            </select>
+        </p>
+        <p>
+            <label for="iprof">Profissão: </label>
+            <input type="text" name="prof" id="iprof" list="lstprof">
+            <datalist id="lstprof">
+                <!-- <option value="ADM">Administrador</option>
+                <option value="CONT">Contabilista</option>
+                <option value="DEV">Desenvolvedor</option>
+                <option value="PROF">Professor</option>
+                No W3C diz que faz optiongroup dentro de datalist mas na pratica não funciona-->
+                    <option>Administrador</option>
+                    <option>Contabilista</option>
+                    <option>Desenvolvedor</option>
+                    <option>Professor</option>
+            </datalist> <!-- Mostra as sugestões que o dev coloco e também as sugestões que o visitando ja colocou  (sem unificar é individual) -->
+        </p>
+        <p>
+            <label for="imsg">Mensagem: </label><br>
+            <textarea name="msg" id="imsg" cols="30" rows="10" placeholder="sua mensagem aqui..."></textarea>
+            <!-- Não é o maximo de colunas 30 e linhas 10 e sim  quantas vão aparecer na tela pois textarea é infinito
+            e o ideal é usar o method: post pra não ter problema de limitação limite de 3000bytes no method get
+            -->
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
