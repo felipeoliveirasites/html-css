@@ -1,11 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Media Query</title>
+    <link rel="stylesheet" href="estilos/tela.css" media="screen">  <!-- media="all" pra tudo-->  
+    <link rel="stylesheet" href="estilos/impressora.css" media="print">
+    <!-- Não estou aqui em cima usando Media Query, estou usando arquivos diferentes para meios diferentes 
+    ----- aqui é Chamada de Media Query --------
+    mais pra frente vai entender que não precisa criar 2 estilos completamente diferente 
+
+    --- Aqui usamos apenas Media Types ----- 
+    mas aqui ficou muito limitado pois screen é qualquer tela: pc, relogio, pc ou tv por isto existe as Medias Features (dentro da tela qual o tamanho eu quero dentro de uma determinada versão exatamente como : versão gigante, tablet, celular e etc) 
+
+    aqui aprendemos Media Types
+    -->
 </head>
 <body>
-    
+    <header>
+        <!-- Criando um site versão para impressora: não colcar menu e trocar tipo de letra para letra de leitura em papel-->
+        <h1>Notícias</h1>
+        <menu>
+            <ul>
+                <li>Esportes</li>
+                <li>Política</li>
+                <li>Tecnologia</li>
+            </ul>
+        </menu>
+    </header>
+    <main>
+        <article>
+            <h2>Estou aprendendo a criar Media Queries</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe, voluptatem, officia sint non ullam magni numquam voluptatibus vitae tempore voluptates aliquam repudiandae quo sunt. Repellat, neque! Eligendi doloribus odit ab? Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae quia culpa repellat eum temporibus assumenda quibusdam nobis, vel labore, voluptatum ullam nulla sed non vitae cumque accusantium velit, eius vero.</p>
+
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit amet, nobis cum earum doloribus quidem adipisci soluta odit culpa cupiditate quam beatae odio molestiae natus magni corrupti nulla accusantium perferendis. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, ex rem culpa dignissimos, quis, doloremque dolores voluptate debitis veritatis consequuntur numquam tenetur sapiente earum nulla expedita ullam similique saepe maxime.</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti alias magnam quaerat, quibusdam eaque excepturi corrupti animi voluptas optio laboriosam sed debitis repellat. Sint illum eaque, fugit accusamus consequuntur natus?</p>
+        </article>
+    </main>
 </body>
 </html>

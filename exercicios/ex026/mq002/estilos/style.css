@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+/* Configurações gerais */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* é possível colocar font-family aqui mas prefira colocar em html */
+}
+
+html,body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #233eff;
+    /* Azul cursoemvideo */
+    background-size: contain;
+    /* geralmente colocamos cover no background-size */
+    background-repeat: no-repeat;
+    background-position: left bottom;
+}
+
+h1 {
+    color: white;
+    text-shadow: 2px 2px 0px #152496;
+    padding: 10px;
+}
