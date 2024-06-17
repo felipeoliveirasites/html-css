@@ -10,8 +10,10 @@
 }
 
 html,body {
+    margin: 0px;
+    padding: 0px;
     width: 100vw;
-    height: 96vh;
+    height: 100vh;
     background-color: #233eff;
     /* Azul cursoemvideo */
     background-size: contain;
