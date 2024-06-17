@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <style>
+        /* declarações gerais*/
+        * {
+            margin: 0px;
+            padding: 0px;
+            
+            /* é possível colocar font-family aqui mas prefira colocar em html */
+        }
+
+        html,body {
+            font-family: Arial, Helvetica, sans-serif; /* boa pratica aqui*/
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            height: 100%;
+            background-color: #233eff;
+            /* Azul cursoemvideo */
+            background-size: contain;
+            /* geralmente colocamos cover no background-size */
+            background-repeat: no-repeat;
+            background-position: left bottom;
+        }
+
+        h1 {
+            color: white;
+            text-shadow: 2px 2px 0px #152496;
+            padding: 10px;
+        }
+
+        /* declarações para retrato */
+        @media screen and (orientation: portrait) {
+            /* Aparelho em pé (portrait) */
+
+            body {
+            /*  background-color: darkgreen;
+            */
+            background-image: url(../imagens/cev-portrait.jpg);
+            background-position: center bottom   ;
+            } 
+        }
+        /* declarações para paisagem */
+        @media screen and (orientation: landscape){
+            
+            /* Aparelho deitado (landscape) */
+
+            body {
+                /* background-color: red;
+            */
+            background-image: url(../imagens/cev-landscape.jpg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Mude a orientação do seu dispositivo </h1>
+    <!-- Media Query é igual à: Media type(tipo de mídia) + Media Features(característica de midias) : existe o media type que é tela mas existe características de tela -->
+</body>
+</html>
