@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+/* declarações gerais */
+@media all {
+    * {
+        margin: 0px;
+        padding: 0px;
+        
+        /* é possível colocar font-family aqui mas prefira colocar em html */
+    }
+    
+    html,body {
+        font-family: Arial, Helvetica, sans-serif; /* boa pratica aqui*/
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+        height: 100%;
+        background-color: #233eff;
+        /* Azul cursoemvideo */
+        background-size: contain;
+        /* geralmente colocamos cover no background-size */
+        background-repeat: no-repeat;
+        background-position: left bottom;
+    }
+    
+    h1 {
+        color: white;
+        text-shadow: 2px 2px 0px #152496;
+        padding: 10px;
+    }
+    
+}
+
+/* declarações para retrato */
+@media screen and (orientation: portrait) {
+    /* Aparelho em pé (portrait) */
+
+    body {
+    /*  background-color: darkgreen;
+    */
+    background-image: url(../imagens/cev-portrait.jpg);
+    background-position: center bottom   ;
+    } 
+}
+
+/* declarações para paisagem */
+@media screen and (orientation: landscape){
+    
+    /* Aparelho deitado (landscape) */
+
+    body {
+        /* background-color: red;
+    */
+    background-image: url(../imagens/cev-landscape.jpg);
+    background-position: left bottom;
+    }
+}
