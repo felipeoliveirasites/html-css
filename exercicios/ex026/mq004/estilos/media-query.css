@@ -30,8 +30,6 @@ Grandes telas: acima de 1200px
     main::after {
         content: 'Essa impressão foi feita através do site www.armagedomdigital.42web.io';
         text-decoration: overline;
-        line-height: 2em;
-        padding: 20px;
     }
 
     main h1{
