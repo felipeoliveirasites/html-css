@@ -2,6 +2,102 @@
 
 /* Todas as demais mídias */
 
-@media print {
+/* Typical Device Breakpoints
+---------- W3C --------------
+
+Pequenas telas: até 600px   
+Celular: de 600px até 768px (tem celular hoje que tem mais)
+Tablet: de 768px até 992px
+Desktop/laptops médio: de 992px até 1200px (acha que é pouco)
+Grandes telas: acima de 1200px
+*/
+
+@media print { /* IMPRESSÃO */
+    html,body {
+        font-family: 'Courier New', Courier, monospace;
+    }
     
+    body {
+        background-image: url(../imagens/back-print.jpg); /* desnecessário */
+    }
+
+    main {
+        border: 2px solid black;
+        width: 90vw;
+        padding: 20px;
+    }
+
+    main::after {
+        content: 'Essa impressão foi feita através do site www.armagedomdigital.42web.io';
+        text-decoration: overline;
+        line-height: 2em;
+        padding: 20px;
+    }
+
+    main h1{
+        text-shadow: none;
+        color: black;
+    }
+    
+    img#phone {display: none;}
+    img#tablet {display: none;}
+    img#print {display: block;}
+    img#pc {display: none;}
+    img#tv {display: none;}
+}
+
+/* @media screen and (max-width: 600px)  { SMALL> PHONES
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 768px)  { MEDIUM: TABLET PORTRAIT E LARGE PHONE
+
+} não precisa pois ja fizemos primeiro para mobile */
+
+@media screen and (min-width: 768px) and (max-width: 992px)  { /*LARGE: TABLET PAISAGEM  */
+    body {
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+
+    img#phone {display: none;}
+    img#tablet {display: block;}
+    img#print {display: none;}
+    img#pc {display: none;}
+    img#tv {display: none;}
+
+    main {
+        width: 80vw;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px)  { /*MEDIUM: DESKTOP/LAPTOP   */
+    body {
+        background-image: url(../imagens/back-pc.jpg);
+    }
+
+    img#phone {display: none;}
+    img#tablet {display: none;}
+    img#print {display: none;}
+    img#pc {display: block;}
+    img#tv {display: none;}
+
+    main {
+        width: 70vw;
+    }
+}
+
+@media screen and (min-width: 1200px) { /*EXTRA LARGUE: DESKTOP/LAPTOP GRANDE */
+    body {
+        background-image: url(../imagens/back-tv.jpg);
+    }
+
+    img#phone {display: none;}
+    img#tablet {display: none;}
+    img#print {display: none;}
+    img#pc {display: none;}
+    img#tv {display: block;}
+
+    main {
+        width: 60vw;
+    }
 }

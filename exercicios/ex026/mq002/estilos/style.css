@@ -13,8 +13,8 @@ html,body {
     font-family: Arial, Helvetica, sans-serif; /* boa pratica aqui*/
     margin: 0px;
     padding: 0px;
-    width: 100%;
-    height: 100%;
+    width: 100%; /* ou 100vw */
+    height: 100%; /* ou 100vh */
     background-color: #233eff;
     /* Azul cursoemvideo */
     background-size: contain;
