@@ -23,13 +23,14 @@ body {
     background-image: url(../imagens/back-phone.jpg);
     background-size: cover;
     background-position: center center;
-    padding-top: 20px ;
+    padding: 20px;
 }
 
 main {
     background-color: rgba(255, 255, 255, 0.842);
     width: 90vw;
-    margin: auto; /* sempre após margin top left e etc */
+    /* margin-top: 20px; */ /* evitar colocar margin-top junto com margin auto */
+    margin: auto; /* sempre após margin top left e etc para evitar problema de rolagem */
     border-radius: 10px;
     padding-top:10px ;
 }
