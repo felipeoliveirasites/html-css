@@ -6,9 +6,9 @@
     <title>Media Query</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"  >
     <link rel="stylesheet" href="estilos/style.css" >
-    
+    <link rel="stylesheet" href="estilos/media-query.css"> 
 </head>
-<body>
+<body onresize="mudouTamanho()">
     <header>
         <h1 id="h1">Meu Site</h1>
         <!-- <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M86-191v-126h788v126H86Zm0-226v-126h788v126H86Zm0-226v-126h788v126H86Z"/></svg> -->
@@ -36,6 +36,15 @@
 
     </footer>
     <script>
+
+        function mudouTamanho() {
+            if (window.innerWidth >= 768) {
+                itens.style.display = 'block'
+            } else {
+                itens.style.display = 'none'
+            }
+        }
+
         function clickMenu() {
             if (itens.style.display == 'block') {
                 itens.style.display = 'none'
@@ -44,6 +53,8 @@
             }
             
         }
+
+        
     </script>
 </body>
 </html>
