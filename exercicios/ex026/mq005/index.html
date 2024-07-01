@@ -46,11 +46,23 @@
         }
 
         function clickMenu() {
-            if (itens.style.display == 'block') {
+            if (itens.style.display == 'none' || itens.style.display == 0 ) {
+                itens.style.display = 'block'
+            } else {
+                itens.style.display = 'none'
+            }
+
+            /* if (itens.style.display == 'block' ) {
                 itens.style.display = 'none'
             } else {
                 itens.style.display = 'block'
-            }
+            } */
+    
+            /* if (itens.style.display == 'none') {
+                itens.style.display = 'block'
+            } else {
+                itens.style.display = 'none'
+            } */ /* aqui precisa colocar inline CSS */
             
         }
 

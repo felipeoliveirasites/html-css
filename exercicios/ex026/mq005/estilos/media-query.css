@@ -26,6 +26,18 @@ Grandes telas: acima de 1200px
     }
 
     main {
-        width: 768px;
+        width: 748px; /* Pode colocar em duas colunas também*/
+        
     }
 }
+
+@media screen and (min-width: 788px) {
+
+    main {
+        width: 768px; 
+        /* width: 90%;
+        column-count: 2;
+        column-gap: 50px;  */
+    }
+}
+

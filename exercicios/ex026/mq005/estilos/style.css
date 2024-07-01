@@ -40,17 +40,6 @@ header > h1:hover {
     background-color: rgb(140, 140, 140);
 }
 
-span#burguer {
-    background-color: rgb(48, 48, 48);
-}
-
-header > menu {
-    display: none;
-}
-
-header > menu > ul {
-    list-style-type: none;
-}
 
 header > span#burguer {
     display: block;
@@ -65,6 +54,15 @@ header > span#burguer:hover {
     color: rgb(48, 48, 48);
     cursor: pointer;
 }
+
+header > menu {
+    display: none;
+}
+
+header > menu > ul {
+    list-style-type: none;
+}
+
 
 header > menu > ul > li > a {
     display: block;
