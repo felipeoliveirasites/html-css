@@ -3,9 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Flexible Box</title>
+    <style>
+        div.container{
+            background-color: lightsalmon;
+            height: 100px;
+            display: flex;
+            flex-flow: column wrap;
+            /* Recomendação da W3C utilize flex-flow no lugar de flex-direction e flex-wrap */
+            /* flex-direction: row;
+            flex-wrap: nowrap; 
+            wrap: vai diminui até o limite do conteúdo depois quebra
+            */
+        }
+        div.item {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center; 
+
+            flex: auto; /* É uma shorthand
+            Ela não permiti que haja espaço em branco dentro do elemnto pai 
+            */
+        }
+        
+    </style>
 </head>
 <body>
-    <!-- O valor padrão do flex-wrap é nowwrap  -->
+    <!-- flex-flow junção de flex-direction + flex-wrap
+     flex-flow: row nowrap
+     Padrao: flex-direction: row e flex-wrap: nowrap -->
+    <div class="container">
+        <div class="item">Exemplo de bloco A</div>
+        <div class="item">Exemplo de bloco B</div>
+        <div class="item">Exemplo de bloco C</div>
+        <div class="item">Exemplo de bloco D</div>
+        <div class="item">Exemplo de bloco E</div>
+        <div class="item">Exemplo de bloco F</div>
+        <div class="item">Exemplo de bloco G</div>
+    </div>
 </body>
 </html>
