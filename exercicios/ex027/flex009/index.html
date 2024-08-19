@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        /* 
+        flex-basis: auto  > largura do tamanho do conteduo interno 
+        flex-basis: 150px > largura de 150px mas se o conterner for menor ele vai diminui tudo igualmente
+        herda do pai o align-content o align-item */  
+            /*  
+            auto - flex-start -flex-end - center - stretch (ocupa o inteiro o cross-axis)
+            */
+        div.container{
+            background-color: lightsalmon;
+            display: flex;
+            flex-flow: row nowrap;
+            /* align-items: center; */
+            justify-content: space-evenly;
+            align-items: center;
+            align-content: space-evenly;
+            height: 200px;
+            
+           /*  justify-content: center; */
+        }
+        div.item {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 150px;
+            flex-shrink: 0.15;
+            
+            /* padding: 2px;
+            line-height: 20px;
+            margin: 0px 2px; */
+            /* flex-grow: 0;
+            flex-shrink: 0; */
+    
+        }
+
+        div.itemg{
+            /* flex-shrink: 0; */
+          
+            flex-grow: 1;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">outro conteudo</div>
+        <div class="item">conteudo um pouco maior</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">conteudo maior ainda, que vai opucar mais espaço.</div>
+        <div class="item itemg">G</div>
+    </div>
+</body>
+</html>
