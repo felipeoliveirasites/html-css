@@ -9,14 +9,34 @@
             background-color: lightsalmon;
             display: flex;
             flex-flow: row nowrap;
+            justify-content: center;
         }
         div.item {
             background-color: lightblue;
             border: 1px solid black;
             text-align: center; 
            /*  flex: auto; */
-           flex-basis: 250px;
-           flex-shrink: 0;
+           /* flex-basis: 250px; */
+           /* flex-shrink: 1; */ /* 1 padrão */
+           /* flex-grow: 0; */ /* 0 padrão */
+        }
+
+        .a{
+            flex-basis: 250px;
+            flex-grow: 0;
+            flex-shrink: 1;
+        }
+
+        .b {
+            flex-basis: 250px;
+            flex-grow: 2;
+            flex-shrink: 0;
+        }
+
+        .c {
+            flex-basis: 250px;
+            flex-grow: 1;
+            flex-shrink: 2;
         }
         
     </style>
@@ -25,9 +45,11 @@
      <!-- Flex-shring padrão: 1
      Flex-grow padrão: 0 -->
     <div class="container">
-        <div class="item">A</div>
-        <div class="item">B</div>
-        <div class="item">C</div>
+        <div class="item a">A Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus porro numquam, ipsum at unde deserunt consequatur eaque quia. Sint id quae dicta deserunt optio accusantium cumque similique veniam delectus debitis.</div>
+        <div class="item b">B Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi adipisci delectus est! Consequuntur quod blanditiis sed dolorum ea beatae fugit sunt! Mollitia reiciendis unde doloremque dolorem quaerat iste quos facere. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto autem ex veritatis mollitia adipisci quam quaerat esse enim optio ut! Saepe eligendi laudantium labore quasi ut? Vitae autem excepturi optio!</div>
+        <div class="item c" >C Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate soluta aspernatur itaque sint repellat, nemo nam eius facilis nihil est ab ducimus voluptate eaque, molestiae laboriosam aliquam beatae id modi.
+        Reiciendis, neque quam autem nemo sequi sit quasi nam itaque nulla, illo reprehenderit corrupti voluptatum mollitia magnam placeat odio enim numquam vel! Porro, veritatis? Earum natus quod voluptatibus placeat eos.
+        Reiciendis laborum ad adipisci corrupti sequi dolore, inventore iure expedita maxime quaerat facilis, officiis vel nemo asperiores labore amet rem eligendi mollitia natus sit necessitatibus. Eius iure adipisci fuga praesentium.</div>
         
     </div>
 </body>
