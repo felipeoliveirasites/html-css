@@ -35,11 +35,18 @@ header nav {
     display: flex;
     flex-flow: row wrap;
     
+    
     justify-content: flex-end;
+    align-items: flex-end;
 
     border: 1px dotted black;
     margin-top: 10px;
+
 }
+
+
+
+
 
 header nav a {
   /*   display: inline-flex; */
