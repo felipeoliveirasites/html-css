@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+body{
+    background-color: red;
+}
+
+header > nav, header {
+    flex-flow: column nowrap;
+}
+
+header > h1 {
+    flex-basis: 50px;
+}
+
+header > nav > a {
+    width: 90vw;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 90%;
+    background-color: blueviolet;
+    height: 40px;
+    border: 2px double rgba(117, 67, 67, 0.363);
+    border-radius: 50px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.363);  
+
+    transition: .45s;
+}
+
+.menu:hover {
+   width: 88%;
+   height: 37px;
+   background-color: #efefef;
+   color: #333;
+   border: 1px solid rgba(0, 0, 0, 0.329);
+   font-weight: 500;
+
+}
+
+#nav {
+    display: none;
+}
+
