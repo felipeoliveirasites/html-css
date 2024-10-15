@@ -10,7 +10,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1em;
-    background-color: lightgray;
+    background-color: rgb(211, 211, 211);
     width: 100%;
     height: 100%;
 }
@@ -26,9 +26,40 @@ header {
     padding: 10px;
 }
 
+header > div > span#burguer {
+    display: none;
+}
+
 header h1 {
-    border: 1px dotted black;
+    /* border: 1px dotted black; */
     flex: 0 1 200px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.404);
+    animation: h1 5s ease-in-out .5s forwards;
+}
+
+@keyframes h1 {
+    0%{
+        transform: scale(1);
+    }
+
+    2% {
+        color: #00000088; /* Cor original */ 
+    }
+    50% {
+        transform: scale(1.2);
+        color: #ffeeee; /* Cor durante a animação */
+        translate: 20% 20%;
+    }
+    80% {
+        transform: scale(1.2);
+        color: #fff; /* Retorna à cor original */
+        translate: 20% 20%;
+    }
+
+    100% {
+        transform: scale(1.2);
+        translate: 20% 20%;
+    }
 }
 
 header nav {
@@ -39,7 +70,7 @@ header nav {
     justify-content: flex-end;
     align-items: flex-end;
 
-    border: 1px dotted black;
+   /*  border: 1px dotted black; */
     margin-top: 10px;
 
 }
@@ -64,9 +95,9 @@ header nav a {
 }
 
 header nav a:hover {
-    background-color: white;
+    background-color: #ddd;
     color: black;
-    transition: background-color .5s;
+    transition: background-color .5s, color .1s;
 }
 
 main {
@@ -87,4 +118,3 @@ main {
 .menu {
     display: none;
 }
-

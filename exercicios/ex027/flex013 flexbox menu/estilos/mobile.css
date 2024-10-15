@@ -1,7 +1,11 @@
 @charset "UTF-8";
 
 body{
-    background-color: red;
+    background-color: rgb(210, 210, 210);
+}
+
+header {
+    overflow: hidden;
 }
 
 header > nav, header {
@@ -12,8 +16,74 @@ header > h1 {
     flex-basis: 50px;
 }
 
-header > nav > a {
-    width: 90vw;
+@keyframes h1 {
+    0%{
+        transform: scale(1);
+    }
+
+    2% {
+        color: #00000088; /* Cor original */ 
+    }
+    50% {
+        transform: scale(1.2);
+        color: #ddd; /* Cor durante a animação */
+    }
+    90% {
+        transform: scale(1.2);
+        color: #fff; /* Retorna à cor original */
+    }
+    100%{
+        transform: scale(1.2);
+        color: #fff; /* Retorna à cor original */
+    }
+}
+
+header > div {
+    box-sizing: border-box;
+    background-color: rgb(170, 170, 170);
+    border-radius: 5px;
+}
+
+header > div:hover {
+    background-color: rgb(150, 150, 150);
+    transition: background-color .5s;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.342);
+} 
+
+header > div > span#burguer {
+    display: block;
+    position: relative;
+
+    background-color: rgb(48, 48, 48);
+   
+    /* width: calc(100vw); */
+    width: calc(100vw - 30px);
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin: auto;
+    
+   
+}
+
+header > div > span#burguer:hover {
+    background-color: #ddd;
+    color: black;
+    cursor: pointer;
+    transition: background-color .5s, color .1s;
+}
+
+header > div > nav#nav {
+    display: none;
+    position: relative;
+    left: -0.67px;
+    padding-bottom: 5px;
+}
+
+header > div > nav > a {
+    /*width: calc(100vw - 15px);*/
+    width: calc(100vw - 45px);
 }
 
 .menu {
@@ -41,7 +111,4 @@ header > nav > a {
 
 }
 
-#nav {
-    display: none;
-}
 

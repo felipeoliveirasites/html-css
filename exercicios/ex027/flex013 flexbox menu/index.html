@@ -6,19 +6,24 @@
     <title>Menu Flex box</title>
     <link rel="stylesheet" href="estilos/style.css">
     <link rel="stylesheet" href="estilos/mobile.css" media="screen and (max-width:543px)">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"  >
+    
 </head>
-<body>
+<body id="body">
     <header>
-        <h1>Meu Site</h1>
-        <div class="menu" onclick="menu()">Menu</div>
-        <nav id="nav">
-            <a href="#">opção 1</a>
-            <a href="#">opção 2</a>
-            <a href="#">opção 3</a>
-            <a href="#">opção 4</a>
-            <a href="#">opção 5</a>
-            <a href="#">opção 6</a>
-        </nav>
+        <h1 id="h1">Meu Site</h1>
+         <!-- <div class="menu" onclick="menu()">Menu</div> -->
+        <div class="burguer-nav">
+            <span id="burguer" class="material-icons " aria-label="Menu" onclick=" menu()" >menu</span>
+            <nav id="nav">
+                <a href="#">opção 1</a>
+                <a href="#">opção 2</a>
+                <a href="#">opção 3</a>
+                <a href="#">opção 4</a>
+                <a href="#">opção 5</a>
+                <a href="#">opção 6</a>
+            </nav>
+        </div>
     </header>
         <main>
             <h1>Teste de Flexbox</h1>
@@ -26,20 +31,107 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, necessitatibus quo nisi culpa quibusdam deserunt dignissimos facere quasi reiciendis alias odit, odio temporibus id. Praesentium ab consequuntur voluptate dolor natus. Lorem ipsum dolor sit amet consectetur adipisicing elit. At odio ex in aliquam magnam quidem nobis aperiam ut error doloremque? Atque earum dignissimos vero corrupti, omnis magni rem laboriosam aspernatur!
             Ipsa sed maiores amet minus nulla inventore facilis nostrum quasi ad dolores debitis eum optio, laboriosam numquam modi neque explicabo mollitia voluptatum animi voluptatem veniam incidunt earum beatae fugit? Odio?
         </main>
-        <script>
+        <!-- <script>
+
+            function clickMenu() {
+                let menu = document.getElementById("nav")
+                if (menu.style.display == "flex") {
+                    menu.style.display = "none"
+                } else {
+                menu.style.display = "flex"
+                }
+            }
 
             function menu(){
 
-            let menu = document.getElementsByClassName('menu');
             let nav = document.getElementById('nav')
-            
-            
-            if ( nav.style.display == 'none' ){
+    
+            if ( nav.style.display == '' || nav.style.display == 'none' ){
             nav.style.display = 'flex';
-        } else {
+            } else {
             nav.style.display = 'none';
+            }
         }
+
+            addEventListener('resize', function() {
+        if (window.innerWidth > 543) { // Ajuste a largura conforme necessário
+            let menu = document.getElementById("nav");
+            menu.style.display = "flex"; // Mostra o menu se a largura for maior que 543px
+        } else {
+            let menu = document.getElementById("nav");
+            menu.style.display = "none"; // Esconde o menu se a largura for menor que 543px
+        }
+    });
+
+
+    
+
+        </script> -->
+
+        <script>
+            //para mobile ele será falso pois esta display: none em mobile
+            let menuVisible = false;
+
+            function menu() { // burguer
+                let menu = document.getElementById("nav");
+                
+                menuVisible = !menuVisible; // Alterna a visibilidade
+                menu.style.display = menuVisible ? "flex" : "none";
+                onMenuVisibilityChange(menuVisible);
+            }
+
+            window.addEventListener('resize', function() {
+                let menu = document.getElementById("nav");
+                if (window.innerWidth > 543) {
+                    // Se a largura for maior que 543px e o menu não está visível
+                    if (!menuVisible) {
+                        menu.style.display = "flex"; // Mostra o menu
+                        menuVisible = true
+                        
+                    }
+                } else {
+                    // Se a largura for menor ou igual a 543px, esconde o menu
+                   
+                    if (menuVisible){
+                    menu.style.display = "none"; // Esconde o menu
+                    menuVisible = false; // Atualiza o estado do menu
+                    onMenuVisibilityChange(menuVisible);
+                    }
+                }
+            });
+        
+        function onMenuVisibilityChange(){
+        let burguer = document.getElementById("burguer")
+        let h1 = document.getElementById("h1")
+        h1.style.animation = "none"
+        h1.offsetHeight; // Forçar reflow
+        if (menuVisible == true) {
+             // Altera o border-radius
+             burguer.style.borderRadius = "5px 5px 0px 0px"; // Define o border-radius desejado
+             h1.style.animation = "h1 5s ease-in-out .5s forwards"
+        }else {
+            burguer.style.borderRadius = "5px";
+            h1.style.animation = "none"
+        } 
     }
+    
         </script>
+
+        <!-- <script>
+            function adjustWidth() {
+    const burguer = document.getElementById("burguer");
+    const scrollbarWidth =  window.innerWidth - document.documentElement.clientWidth; ; // Calcula a largura da barra de rolagem
+    console.log(scrollbarWidth)
+    burguer.style.width = `calc(100vw + ${scrollbarWidth}px)`; // Ajusta a largura
+    
+}
+
+// Chame a função no carregamento da página e sempre que a janela for redimensionada
+window.onload = adjustWidth;
+window.onresize = adjustWidth;
+        </script> -->
+
+        
+        
 </body>
 </html>
