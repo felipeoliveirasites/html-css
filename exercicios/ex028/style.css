@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+div.container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows:100px 100px 100px ;
+    grid-gap: 20px;
+    background: rgb(167, 75, 75)
+}
+
+div.item{
+    background-color: aqua;
+    text-align: center;
+    border: 2px solid black;
+}
