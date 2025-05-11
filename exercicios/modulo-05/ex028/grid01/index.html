@@ -12,18 +12,19 @@
         }
 
         main.container{
-            border: 3px solid blue;
             display: grid;
+            height: 250px;
+            border: 3px solid blue;
             grid-template-columns: auto auto auto;
-            grid-template-rows: 100px 100px 100px;
+            grid-template-rows: auto auto auto;
             gap: 5px 5px;
-            /* height: 250px; */
+            padding: 5px;
+
             align-items: stretch;
             justify-items: stretch;
-            padding: 5px;
-            height: 500px;
             align-content: stretch;
-            justify-content: stretch;
+            justify-content: space-around;
+           
         }
 
         div.item{
